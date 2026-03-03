@@ -54,6 +54,29 @@
     <h1>申請する交流会の日付を選択してください<br>신청할 교류회날짜를 선택해 주세요</h1>
     <p>ご希望の交流会をクリックすると、申し込みページへ移動します。<br>원하는 교류회를 클릭하면 신청 페이지로 연결됩니다.</p>
 </section>
+    <div style="background: #f0f2f5; margin: 10px 5%; padding: 20px; border-radius: 15px; text-align: center;">
+    <p style="margin: 0; font-size: 14px; color: #666;">현재 실시간 신청 현황</p>
+    <div style="display: flex; justify-content: center; align-items: baseline; gap: 5px; margin-top: 10px;">
+        <span id="apply-count" style="font-size: 32px; font-weight: bold; color: #eb4d4b;">--</span>
+        <span style="font-size: 18px; font-weight: bold;">명 신청 중!</span>
+    </div>
+    <p style="font-size: 12px; color: #999; margin-top: 10px;">※ 10분마다 자동으로 업데이트됩니다.</p>
+</div>
+
+<script>
+    // 구글 시트에서 데이터를 가져와 숫자를 세는 로직
+    // (나중에 구글 시트 주소를 여기에 연결하면 숫자가 바뀝니다)
+    async function getApplyCount() {
+        try {
+            // 여기에 사용자님의 구글 시트 CSV 주소가 들어갈 자리입니다.
+            // 지금은 임시로 15명이라고 표시되게 해둘게요.
+            document.getElementById('apply-count').innerText = "15"; 
+        } catch (e) {
+            document.getElementById('apply-count').innerText = "0";
+        }
+    }
+    getApplyCount();
+</script>
 
 <div class="container">
     <div class="card">
