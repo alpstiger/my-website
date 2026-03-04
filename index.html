@@ -36,3 +36,72 @@
 <header>
     <a href="#" class="logo">SAI 際 日韓交流会</a>
     <div style="font-size:12px; color:#888;">한일교류회 공식신청</div>
+</header>
+
+<div class="main-image-container">
+    <img src="main.jpg" alt="SAI 교류회 메인 이미지">
+</div>
+
+<section class="hero">
+    <h1>申請する交流会の日付を選択してください<br>신청할 교류회날짜를 선택해 주세요</h1>
+    <p>ご希望の交流会をクリックすると、申し込みページへ移動します。<br>원하는 교류회를 클릭하면 신청 페이지로 연결됩니다.</p>
+</section>
+
+<div style="background: #f0f2f5; margin: 10px 5%; padding: 20px; border-radius: 15px; text-align: center;">
+    <p style="margin: 0; font-size: 14px; color: #666;">현재 실시간 신청 현황</p>
+    <div style="display: flex; justify-content: center; align-items: baseline; gap: 5px; margin-top: 10px;">
+        <span id="apply-count" style="font-size: 32px; font-weight: bold; color: #eb4d4b;">--</span>
+        <span style="font-size: 18px; font-weight: bold;">명 신청 중!</span>
+    </div>
+    <p style="font-size: 12px; color: #999; margin-top: 10px;">※ 24시간마다 자동으로 업데이트됩니다.</p>
+</div>
+
+<div style="text-align: center; margin-top: 15px; margin-bottom: 25px;">
+    <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Falpstiger.github.io%2Fmy-website&count_bg=%23EB4D4B&title_bg=%23555555&title=VISITOR" alt="Hits">
+    <p style="font-size: 11px; color: #999; margin-top: 5px;">실시간 방문자 데이터 집계 중</p>
+</div>
+
+<div class="container">
+    <div class="card">
+        <div style="font-size: 40px;">🌸</div>
+        <h3>日韓交流会 한일교류회 ・SAI 祭・</h3>
+        <p>日時：3月7日（土）15:15〜17:15 일시: 3월 7일(토) 15:15〜17:15<br>場所: 大久保地域センター3F 会議室 장소: 오쿠보지역센터 3F 회의실</p>
+        <button class="btn" onclick="location.href='https://docs.google.com/forms/d/e/1FAIpQLSd62_BmD7hzu-VS35XTZIFlRNVChAo9xjHgAcqhH45xh_RO-g/viewform?usp=header'">신청하러 가기</button>
+    </div>
+
+    <div class="card">
+        <div style="font-size: 40px;">🌸</div>
+        <h3>日韓交流会 한일교류회 ・SAI 祭・</h3>
+        <p>日時：3月15日（日）17:30〜19:30 일시: 3월 15일(일) 17:30〜19:30<br>場所: 大久保地域センター3F 会議室 장소: 오쿠보지역센터 3F 회의실</p>
+        <button class="btn" onclick="location.href='https://docs.google.com/forms/d/e/1FAIpQLSfp7cDxwwVmkpcCo5xF-fuFY8kugLTxlsuqix5TJ6XYLpjrIA/viewform?usp=header'">신청하러 가기</button>
+    </div>
+
+    <div class="card">
+        <div style="font-size: 40px;">🏮</div>
+        <h3>サムギョプサル&ラーメン食べ放題パーティー<br>삼겹살&라면 무제한 파티 </h3>
+        <p>日時：3月19日（목）19:45〜21:45 일시: 3월 19일(목) 19:45〜21:45 <br>場所: 大久보지역센터 3F 工作調理室 장소: 오쿠보지역센터 3F 공작조리실</p>
+        <button class="btn" onclick="location.href='https://docs.google.com/forms/d/e/1FAIpQLSfybzI0rrn_ZTy9UpKvF6etG_uCBR48E4dal5Qkni8JbWpLKw/viewform?usp=header'">신청하러 가기</button>
+    </div>
+
+    <div class="card">
+        <div style="font-size: 40px;">🏮</div>
+        <h3>日韓交流会 한일교류회 SAI 祭 사이 <2030会></h3>
+        <p>日時：3月21일（土）15:15~17:15 일시: 3월 21일(토) 15:15~17:15 <br>場所: 大久保地域センター3F 会議室 장소: 오쿠보지역센터 3F 회의실</p>
+        <button class="btn" onclick="location.href='https://docs.google.com/forms/d/e/1FAIpQLSccO76MVsYZ_eTM-DP5b3Od8VIIinNcX0BAGu_4rYHqgFULzw/viewform?usp=header'">신청하러 가기</button>
+    </div>
+</div>
+
+<script>
+    async function getApplyCount() {
+        try {
+            // 현재 수동으로 3명 설정
+            document.getElementById('apply-count').innerText = "3"; 
+        } catch (e) {
+            document.getElementById('apply-count').innerText = "0";
+        }
+    }
+    getApplyCount();
+</script>
+
+</body>
+</html>
