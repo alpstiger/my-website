@@ -26,9 +26,14 @@
             .container { grid-template-columns: 1fr 1fr; }
             .hero h1 { font-size: 32px; }
         }
-        .card { background: white; border-radius: 15px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); text-align: center; display: flex; flex-direction: column; }
+        .card { background: white; border-radius: 15px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); text-align: center; display: flex; flex-direction: column; position: relative; }
         .card h3 { font-size: 20px; margin: 15px 0 10px; }
         .btn { width: 100%; padding: 15px; border: none; background: #222; color: white; border-radius: 10px; font-weight: bold; cursor: pointer; margin-top: auto; font-size: 16px; }
+        
+        /* 지난 교류회 스타일 */
+        .past-session { opacity: 0.7; filter: grayscale(0.5); }
+        .sold-out-badge { position: absolute; top: 15px; right: 15px; background: #888; color: white; padding: 5px 10px; border-radius: 5px; font-size: 12px; font-weight: bold; }
+        .past-title { margin: 40px 0 20px; text-align: center; color: #888; font-size: 18px; border-top: 1px solid #eee; padding-top: 30px; }
     </style>
 </head>
 <body>
@@ -43,62 +48,16 @@
 </div>
 
 <section class="hero">
-    <h1>申請する交流会の日付を選択してください<br>신청할 교류회날짜를 선택해 주세요</h1>
+    <h1>申請する交流회の日付を選択してください<br>신청할 교류회날짜를 선택해 주세요</h1>
     <p>ご希望の交流会をクリックすると、申し込みページへ移動します。<br>원하는 교류회를 클릭하면 신청 페이지로 연결됩니다.</p>
 </section>
 
-
+<!-- 안심 문구 박스 -->
 <div style="text-align: center; margin: 30px 5%; padding: 20px; background: #fff5f5; border-radius: 15px; border: 1px solid #feb2b2;">
-    <!-- 일본어 문구 (가장 위) -->
     <p style="margin: 0; font-size: 16px; color: #333; font-weight: bold;">
         ✨ <span style="color: #eb4d4b;">お一人様でのご参加が99%</span>입니다!
     </p>
     <p style="margin: 5px 0 15px; font-size: 14px; color: #666;">
         初めての方も、お気軽にお申し込みください。:)
     </p>
-
-    <hr style="border: 0; border-top: 1px dotted #feb2b2; margin: 15px auto; width: 50%;">
-
-    <!-- 한국어 문구 -->
-    <p style="margin: 0; font-size: 16px; color: #333; font-weight: bold;">
-        ✨ <span style="color: #eb4d4b;">혼자 오시는 분이 90%</span>입니다!
-    </p>
-    <p style="margin: 5px 0 0; font-size: 14px; color: #666;">
-        낯가림 걱정 말고 가벼운 마음으로 신청하세요. :)
-    </p>
-</div>
-   
-</div>
-    
-<div class="container">
-    <div class="card">
-        <div style="font-size: 40px;">🌸</div>
-        <h3>日韓交流会 한일교류회 ・SAI 祭・</h3>
-        <p>日時：3月7日（土）15:15〜17:15 일시: 3월 7일(토) 15:15〜17:15<br>場所: 大久保地域センター3F 会議室 장소: 오쿠보지역센터 3F 회의실</p>
-        <button class="btn" onclick="location.href='https://docs.google.com/forms/d/e/1FAIpQLSd62_BmD7hzu-VS35XTZIFlRNVChAo9xjHgAcqhH45xh_RO-g/viewform?usp=header'">신청하러 가기</button>
-    </div>
-
-    <div class="card">
-        <div style="font-size: 40px;">🌸</div>
-        <h3>日韓交流会 한일교류회 ・SAI 祭・</h3>
-        <p>日時：3月15日（日）17:30〜19:30 일시: 3월 15일(일) 17:30〜19:30<br>場所: 大久保地域センター3F 会議室 장소: 오쿠보지역센터 3F 회의실</p>
-        <button class="btn" onclick="location.href='https://docs.google.com/forms/d/e/1FAIpQLSfp7cDxwwVmkpcCo5xF-fuFY8kugLTxlsuqix5TJ6XYLpjrIA/viewform?usp=header'">신청하러 가기</button>
-    </div>
-
-    <div class="card">
-        <div style="font-size: 40px;">🏮</div>
-        <h3>サムギョプサル&ラーメン食べ放題パーティー<br>삼겹살&라면 무제한 파티 </h3>
-        <p>日時：3月19日（목）19:45〜21:45 일시: 3월 19일(목) 19:45〜21:45 <br>場所: 大久보지역센터 3F 工作調理室 장소: 오쿠보지역센터 3F 공작조리실</p>
-        <button class="btn" onclick="location.href='https://docs.google.com/forms/d/e/1FAIpQLSfybzI0rrn_ZTy9UpKvF6etG_uCBR48E4dal5Qkni8JbWpLKw/viewform?usp=header'">신청하러 가기</button>
-    </div>
-
-    <div class="card">
-        <div style="font-size: 40px;">🏮</div>
-        <h3>日韓交流会 한일교류회 SAI 祭 사이 <2030会></h3>
-        <p>日時：3月21일（土）15:15~17:15 일시: 3월 21일(토) 15:15~17:15 <br>場所: 大久保地域センター3F 会議室 장소: 오쿠보지역센터 3F 회의실</p>
-        <button class="btn" onclick="location.href='https://docs.google.com/forms/d/e/1FAIpQLSccO76MVsYZ_eTM-DP5b3Od8VIIinNcX0BAGu_4rYHqgFULzw/viewform?usp=header'">신청하러 가기</button>
-    </div>
-</div>
-
-</body>
-</html>
+    <hr style
