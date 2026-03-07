@@ -1,103 +1,144 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2JHE5N88G5"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-2JHE5N88G5');
-    </script>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAI 際 日韓交流회 | 한일교류회</title>
-    <style>
-        body { font-family: -apple-system, sans-serif; margin: 0; padding: 0; background: #fdfdfd; color: #333; line-height: 1.6; }
-        header { background: #fff; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 100; }
-        .logo { font-size: 20px; font-weight: bold; color: #eb4d4b; text-decoration: none; }
-        .main-image-container { width: 100%; max-width: 1200px; margin: 20px auto; padding: 0 5%; box-sizing: border-box; }
-        .main-image-container img { width: 100%; height: auto; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-        .hero { padding: 30px 5%; text-align: center; }
-        .hero h1 { font-size: 24px; margin-bottom: 10px; }
-        .hero p { font-size: 15px; color: #666; }
-        .container { padding: 20px 5%; display: grid; grid-template-columns: 1fr; gap: 20px; max-width: 1000px; margin: 0 auto; }
-        @media (min-width: 600px) {
-            .container { grid-template-columns: 1fr 1fr; }
-            .hero h1 { font-size: 32px; }
-        }
-        .card { background: white; border-radius: 15px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); text-align: center; display: flex; flex-direction: column; }
-        .card h3 { font-size: 20px; margin: 15px 0 10px; }
-        .btn { width: 100%; padding: 15px; border: none; background: #222; color: white; border-radius: 10px; font-weight: bold; cursor: pointer; margin-top: auto; font-size: 16px; }
-    </style>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2JHE5N88G5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-2JHE5N88G5');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAI 際 日韓交流회 | 한일교류회</title>
+    
+    <style>
+        /* 기본 레이아웃 및 중앙 정렬 */
+        body { font-family: -apple-system, sans-serif; margin: 0; padding: 0; background: #fdfdfd; color: #333; line-height: 1.6; text-align: center; }
+        
+        /* 헤더 스타일 */
+        header { background: #fff; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 100; box-sizing: border-box; }
+        .logo { font-size: 20px; font-weight: bold; color: #eb4d4b; text-decoration: none; }
+        
+        /* 이미지 스타일 */
+        .main-image-container { width: 100%; max-width: 1200px; margin: 20px auto; padding: 0 5%; box-sizing: border-box; }
+        .main-image-container img { width: 100%; height: auto; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: block; margin: 0 auto; }
+        
+        /* 영웅 섹션 스타일 */
+        .hero { padding: 30px 5%; text-align: center; }
+        .hero h1 { font-size: 24px; margin-bottom: 10px; line-height: 1.3; }
+        .hero p { font-size: 15px; color: #666; margin: 0 auto; max-width: 600px; }
+        
+        /* 교류회 카드 목록 레이아웃 */
+        .container { padding: 20px 5%; display: grid; grid-template-columns: 1fr; gap: 20px; max-width: 1000px; margin: 0 auto; box-sizing: border-box; }
+        @media (min-width: 600px) {
+            .container { grid-template-columns: 1fr 1fr; }
+            .hero h1 { font-size: 32px; }
+        }
+        
+        /* 카드 디자인 */
+        .card { background: white; border-radius: 15px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); text-align: center; display: flex; flex-direction: column; position: relative; box-sizing: border-box; }
+        .card h3 { font-size: 18px; margin: 15px 0 10px; line-height: 1.4; }
+        .card p { font-size: 14px; color: #666; margin: 0 0 20px; }
+        
+        /* 이모티콘 스타일 */
+        .emoji { font-size: 40px; margin: 0 auto 10px; display: block; }
+        
+        /* 버튼 디자인 */
+        .btn { width: 100%; padding: 15px; border: none; background: #222; color: white; border-radius: 10px; font-weight: bold; cursor: pointer; margin-top: auto; font-size: 16px; transition: background 0.2s; -webkit-appearance: none; }
+        .btn:hover { background: #444; }
+        
+        /* 안심 문구 박스 스타일 */
+        .info-box { text-align: center; margin: 0 5% 30px; padding: 25px; background: #fff5f5; border-radius: 15px; border: 1px solid #feb2b2; box-sizing: border-box; }
+        .info-box p { margin: 0; line-height: 1.5; }
+        .info-title { font-size: 16px; color: #333; font-weight: bold; }
+        .info-desc { font-size: 14px; color: #666; margin: 5px 0 0; }
+        .highlight { color: #eb4d4b; }
+        
+        /* 구분선 스타일 */
+        .dotted-line { border: 0; border-top: 1px dotted #feb2b2; margin: 15px auto; width: 50%; }
+        
+        /* 종료된 교류회 스타일 */
+        .past-title { margin: 60px 0 20px; text-align: center; color: #888; font-size: 18px; border-top: 1px solid #eee; padding-top: 40px; }
+        .past-session { opacity: 0.6; filter: grayscale(0.8); }
+        .sold-out-badge { position: absolute; top: 15px; right: 15px; background: #888; color: white; padding: 5px 10px; border-radius: 5px; font-size: 12px; font-weight: bold; }
+        .btn-past { background: #ccc; cursor: default; }
+        .btn-past:hover { background: #ccc; }
+    </style>
 </head>
 <body>
 
 <header>
-    <a href="#" class="logo">SAI 際 日韓交流会</a>
-    <div style="font-size:12px; color:#888;">한일교류회 공식신청</div>
+    <a href="#" class="logo">SAI 際 日韓交流회</a>
+    <div style="font-size:12px; color:#888;">한일교류회 공식신청</div>
 </header>
 
 <div class="main-image-container">
-    <img src="main2.png" alt="SAI 교류회 메인 이미지">
+    <img src="main2.png" alt="SAI 교류회 메인 이미지">
 </div>
 
 <section class="hero">
-    <h1>申請する交流会の日付を選択してください<br>신청할 교류회날짜를 선택해 주세요</h1>
-    <p>ご希望の交流会をクリックすると、申し込みページへ移動します。<br>원하는 교류회를 클릭하면 신청 페이지로 연결됩니다.</p>
+    <h1>申請する交流회の日付を選択してください<br>신청할 교류회날짜를 선택해 주세요</h1>
+    <p>ご希望의 交流会를 클릭하면 신청 페이지로 연결됩니다.</p>
 </section>
 
+<div class="info-box">
+    <p class="info-title">
+        ✨ <span class="highlight">お一人様でのご参加가 99%</span>입니다!
+    </p>
+    <p class="info-desc" style="margin-bottom: 15px;">
+        初めての方도、お気軽にお申し込みください。:)
+    </p>
 
-<div style="text-align: center; margin: 30px 5%; padding: 20px; background: #fff5f5; border-radius: 15px; border: 1px solid #feb2b2;">
-    <!-- 일본어 문구 (가장 위) -->
-    <p style="margin: 0; font-size: 16px; color: #333; font-weight: bold;">
-        ✨ <span style="color: #eb4d4b;">お一人様でのご参加が99%</span>입니다!
-    </p>
-    <p style="margin: 5px 0 15px; font-size: 14px; color: #666;">
-        初めての方も、お気軽にお申し込みください。:)
-    </p>
+    <hr class="dotted-line">
 
-    <hr style="border: 0; border-top: 1px dotted #feb2b2; margin: 15px auto; width: 50%;">
-
-    <!-- 한국어 문구 -->
-    <p style="margin: 0; font-size: 16px; color: #333; font-weight: bold;">
-        ✨ <span style="color: #eb4d4b;">혼자 오시는 분이 90%</span>입니다!
-    </p>
-    <p style="margin: 5px 0 0; font-size: 14px; color: #666;">
-        낯가림 걱정 말고 가벼운 마음으로 신청하세요. :)
-    </p>
+    <p class="info-title">
+        ✨ <span class="highlight">혼자 오시는 분이 90%</span>입니다!
+    </p>
+    <p class="info-desc">
+        낯가림 걱정 말고 가벼운 마음으로 신청하세요. :)
+    </p>
 </div>
-   
-</div>
-    
+
 <div class="container">
-    <div class="card">
-        <div style="font-size: 40px;">🌸</div>
-        <h3>日韓交流会 한일교류회 ・SAI 祭・</h3>
-        <p>日時：3月7日（土）15:15〜17:15 일시: 3월 7일(토) 15:15〜17:15<br>場所: 大久保地域センター3F 会議室 장소: 오쿠보지역센터 3F 회의실</p>
-        <button class="btn" onclick="location.href='https://docs.google.com/forms/d/e/1FAIpQLSd62_BmD7hzu-VS35XTZIFlRNVChAo9xjHgAcqhH45xh_RO-g/viewform?usp=header'">신청하러 가기</button>
-    </div>
+    
+    <div class="card">
+        <span class="emoji">🌸</span>
+        <h3>日韓交流会 한일교류회 SAI 祭</h3>
+        <p>3월 15일(일) 17:30〜19:30<br>大久保地域センター 3F 会議室</p>
+        <button class="btn" onclick="location.href='https://docs.google.com/forms/d/e/1FAIpQLSfp7cDxwwVmkpcCo5xF-fuFY8kugLTxlsuqix5TJ6XYLpjrIA/viewform?usp=header'">신청하러 가기</button>
+    </div>
 
-    <div class="card">
-        <div style="font-size: 40px;">🌸</div>
-        <h3>日韓交流会 한일교류회 ・SAI 祭・</h3>
-        <p>日時：3月15日（日）17:30〜19:30 일시: 3월 15일(일) 17:30〜19:30<br>場所: 大久保地域センター3F 会議室 장소: 오쿠보지역센터 3F 회의실</p>
-        <button class="btn" onclick="location.href='https://docs.google.com/forms/d/e/1FAIpQLSfp7cDxwwVmkpcCo5xF-fuFY8kugLTxlsuqix5TJ6XYLpjrIA/viewform?usp=header'">신청하러 가기</button>
-    </div>
+    
+    <div class="card">
+        <span class="emoji">🏮</span>
+        <h3>삼겹살&라면 무제한 파티 </h3>
+        <p>3월 19일(목) 19:45〜21:45<br>大久보지역센터 3F 工作調理室</p>
+        <button class="btn" onclick="location.href='https://docs.google.com/forms/d/e/1FAIpQLSfybzI0rrn_ZTy9UpKvF6etG_uCBR48E4dal5Qkni8JbWpLKw/viewform?usp=header'">신청하러 가기</button>
+    </div>
 
-    <div class="card">
-        <div style="font-size: 40px;">🏮</div>
-        <h3>サムギョプサル&ラーメン食べ放題パーティー<br>삼겹살&라면 무제한 파티 </h3>
-        <p>日時：3月19日（목）19:45〜21:45 일시: 3월 19일(목) 19:45〜21:45 <br>場所: 大久보지역센터 3F 工作調理室 장소: 오쿠보지역센터 3F 공작조리실</p>
-        <button class="btn" onclick="location.href='https://docs.google.com/forms/d/e/1FAIpQLSfybzI0rrn_ZTy9UpKvF6etG_uCBR48E4dal5Qkni8JbWpLKw/viewform?usp=header'">신청하러 가기</button>
-    </div>
+    
+    <div class="card">
+        <span class="emoji">🏮</span>
+        <h3>日韓交流회 SAI 祭 <2030会></h3>
+        <p>3월 21일(토) 15:15~17:15<br>大久보지역센터 3F 회의실</p>
+        <button class="btn" onclick="location.href='https://docs.google.com/forms/d/e/1FAIpQLSccO76MVsYZ_eTM-DP5b3Od8VIIinNcX0BAGu_4rYHqgFULzw/viewform?usp=header'">신청하러 가기</button>
+    </div>
 
-    <div class="card">
-        <div style="font-size: 40px;">🏮</div>
-        <h3>日韓交流会 한일교류회 SAI 祭 사이 <2030会></h3>
-        <p>日時：3月21일（土）15:15~17:15 일시: 3월 21일(토) 15:15~17:15 <br>場所: 大久保地域センター3F 会議室 장소: 오쿠보지역센터 3F 회의실</p>
-        <button class="btn" onclick="location.href='https://docs.google.com/forms/d/e/1FAIpQLSccO76MVsYZ_eTM-DP5b3Od8VIIinNcX0BAGu_4rYHqgFULzw/viewform?usp=header'">신청하러 가기</button>
-    </div>
+</div>
+
+<h2 class="past-title">종료된 교류회 기록 (Past Events)</h2>
+<div class="container" style="margin-bottom: 50px;">
+    
+    <div class="card past-session">
+        <div class="sold-out-badge">종료</div>
+        <span class="emoji">🌸</span>
+        <h3>日韓交流会 한일교류회 SAI 祭</h3>
+        <p>3월 7일(토) - 종료됨<br>많은 분들이 함께해주셨습니다!</p>
+        <button class="btn btn-past" disabled>신청 마감</button>
+    </div>
+
 </div>
 
 </body>
