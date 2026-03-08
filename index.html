@@ -1,113 +1,68 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2JHE5N88G5"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-2JHE5N88G5');
-    </script>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAI 際 日韓交流회 | 한일교류회</title>
-    
-    <style>
-        body { font-family: -apple-system, sans-serif; margin: 0; padding: 0; background: #fdfdfd; color: #333; line-height: 1.6; text-align: center; }
-        header { background: #fff; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 100; box-sizing: border-box; }
-        .logo { font-size: 20px; font-weight: bold; color: #eb4d4b; text-decoration: none; }
-        .main-image-container { width: 100%; max-width: 1200px; margin: 20px auto; padding: 0 5%; box-sizing: border-box; }
-        .main-image-container img { width: 100%; height: auto; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: block; margin: 0 auto; }
-        .hero { padding: 30px 5%; text-align: center; }
-        .hero h1 { font-size: 24px; margin-bottom: 10px; line-height: 1.3; }
-        .hero p { font-size: 15px; color: #666; margin: 0 auto; }
-        
-        /* 카드 컨테이너 설정 */
-        .container { padding: 20px 5%; display: grid; grid-template-columns: 1fr; gap: 20px; max-width: 1000px; margin: 0 auto; box-sizing: border-box; }
-        @media (min-width: 600px) { .container { grid-template-columns: 1fr 1fr; } }
-        
-        .card { background: white; border-radius: 15px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); text-align: center; display: flex; flex-direction: column; position: relative; box-sizing: border-box; }
-        .emoji { font-size: 40px; margin-bottom: 15px; display: block; }
-        .card h3 { font-size: 18px; margin: 10px 0; }
-        .btn { width: 100%; padding: 15px; border: none; background: #222; color: white; border-radius: 10px; font-weight: bold; cursor: pointer; margin-top: auto; font-size: 16px; -webkit-appearance: none; }
-        
-        .info-box { text-align: center; margin: 20px 5% 30px; padding: 25px; background: #fff5f5; border-radius: 15px; border: 1px solid #feb2b2; box-sizing: border-box; }
-        .highlight { color: #eb4d4b; font-weight: bold; }
-        .dotted-line { border: 0; border-top: 1px dotted #feb2b2; margin: 15px auto; width: 50%; }
-        
-        .past-title { margin: 60px 0 20px; text-align: center; color: #888; font-size: 18px; border-top: 1px solid #eee; padding-top: 40px; }
-        .past-session { opacity: 0.6; filter: grayscale(0.8); }
-        .sold-out-badge { position: absolute; top: 15px; right: 15px; background: #888; color: white; padding: 5px 10px; border-radius: 5px; font-size: 12px; }
-    </style>
-</head>
-<body>
+<!-- 스타일 섹션에 아래 내용을 추가/수정하세요 -->
+<style>
+    /* ...기존 스타일 유지... */
 
-<header>
-    <a href="#" class="logo">SAI 際 日韓交流회</a>
-    <div style="font-size:12px; color:#888;">한일교류회 공식신청</div>
-</header>
+    .main-image-container { 
+        width: 100%; 
+        max-width: 1200px; 
+        margin: 20px auto; 
+        padding: 0 5%; 
+        box-sizing: border-box; 
+        position: relative; /* 슬라이드 위치 기준 */
+        overflow: hidden; 
+    }
 
+    .slides {
+        display: none; /* 기본적으로 숨김 */
+        width: 100%;
+        animation: fade 1.5s; /* 부드러운 전환 효과 */
+    }
+
+    .slides img { 
+        width: 100%; 
+        height: auto; 
+        border-radius: 15px; 
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+        display: block; 
+    }
+
+    /* 페이드 애니메이션 */
+    @keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+    }
+</style>
+
+<!-- 본문 이미지 컨테이너 부분을 아래와 같이 수정하세요 -->
 <div class="main-image-container">
-    <img src="main2.png" alt="SAI 교류회 메인 이미지">
-</div>
-
-<section class="hero">
-    <h1>申請する交流会の日付を選択してください<br>신청할 교류회날짜를 선택해 주세요</h1>
-    <p>원하는 교류회를 클릭하면 신청 페이지로 연결됩니다.</p>
-</section>
-
-<div class="info-box">
-    <p>✨ <span class="highlight">お一人様でのご参加が99%</span>입니다!</p>
-    <p style="font-size: 14px; color: #666;">初めての方も、お気軽にお申し込みください。:)</p>
-    <hr class="dotted-line">
-    <p>✨ <span class="highlight">혼자 오시는 분이 99%</span>입니다!</p>
-    <p style="font-size: 14px; color: #666;">낯가림 걱정 말고 가벼운 마음으로 신청하세요. :)</p>
-</div>
-
-<!-- 신청 가능 리스트 -->
-<div class="container">
-    <div class="card">
-        <span class="emoji">🌸</span>
-        <h3>日韓交流会 한일교류회 SAI 祭</h3>
-        <p>3월 15일(일) 17:30〜19:30<br>大久保地域センター 3F 会議室</p>
-        <button class="btn" onclick="location.href='https://docs.google.com/forms/d/e/1FAIpQLSfp7cDxwwVmkpcCo5xF-fuFY8kugLTxlsuqix5TJ6XYLpjrIA/viewform?usp=header'">신청하러 가기</button>
+    <!-- 첫 번째 슬라이드 -->
+    <div class="slides">
+        <img src="main1.png" alt="SAI 교류회 이미지 1">
     </div>
-
-    <div class="card">
-        <span class="emoji">🏮</span>
-        <h3>삼겹살&라면 무제한 파티 </h3>
-        <p>3월 19일(목) 19:45〜21:45<br>大久보지역센터 3F 工作調理室</p>
-        <button class="btn" onclick="location.href='https://docs.google.com/forms/d/e/1FAIpQLSfybzI0rrn_ZTy9UpKvF6etG_uCBR48E4dal5Qkni8JbWpLKw/viewform?usp=header'">신청하러 가기</button>
-    </div>
-
-    <div class="card">
-        <span class="emoji">🏮</span>
-        <h3>日韓交流회 SAI 祭 <2030会></h3>
-        <p>3월 21일(토) 15:15~17:15<br>大久보지역센터 3F 회의실</p>
-        <button class="btn" onclick="location.href='https://docs.google.com/forms/d/e/1FAIpQLSccO76MVsYZ_eTM-DP5b3Od8VIIinNcX0BAGu_4rYHqgFULzw/viewform?usp=header'">신청하러 가기</button>
-    </div>
-
-     <div class="card">
-        <span class="emoji">🌸</span>
-        <h3>日韓交流会 한일교류회 SAI 祭</h3>
-        <p>3월 22일(일) 17:30〜19:30<br>大久保地域センター 3F 会議室</p>
-        <button class="btn" onclick="location.href='https://docs.google.com/forms/d/e/1FAIpQLScetCLvYdwgCa7acEAO1Flc-haKrnzeUHpVpX3ttBiKkLrAlg/viewform?usp=publish-editor'">신청하러 가기</button>
-    </div>
-    
-
-</div>
-
-<h2 class="past-title">종료된 교류회 기록 (Past Events)</h2>
-<div class="container" style="margin-bottom: 50px;">
-    <div class="card past-session">
-        <div class="sold-out-badge">종료</div>
-        <span class="emoji">🌸</span>
-        <h3>日韓交流회 SAI 祭 (3/7)</h3>
-        <p>종료되었습니다. 감사합니다!</p>
-        <button class="btn" style="background:#ccc;" disabled>신청 마감</button>
+    <!-- 두 번째 슬라이드 (기존 main2.png) -->
+    <div class="slides">
+        <img src="main2.png" alt="SAI 교류회 이미지 2">
     </div>
 </div>
 
-</body>
-</html>
+<!-- body 태그가 끝나기 직전에 아래 스크립트를 추가하세요 -->
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("slides");
+        
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        
+        slides[slideIndex-1].style.display = "block";  
+        
+        setTimeout(showSlides, 4000); // 4초마다 이미지 전환
+    }
+</script>
