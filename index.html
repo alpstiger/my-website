@@ -55,12 +55,15 @@
         overflow: hidden; 
     }
 
-    .slides {
-        display: none; /* 기본적으로 숨김 */
-        width: 100%;
-        animation: fade 1.5s; /* 부드러운 전환 효과 */
+  .slides:first-child {
+    display: block;
+}
     }
 
+.slides:first-child {
+    display: block;
+}
+        
     .slides img { 
         width: 100%; 
         height: auto; 
